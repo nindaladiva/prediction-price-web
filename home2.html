@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Prediksi Harga</title>
+      <style type="text/css">
+    .login {
+        margin: 50px auto;
+        width: 500px;
+        height: 400px;
+        padding: 10px;
+        border: 5px solid #00008B;
+     </style>
+</head>
+
+<body style="background: #6495ED;">
+<font face="helvetica">
+  <div class="login">
+        <center><h2><font color="#00008B">Prediksi Harga Sewa Kost Putri Sekitar UII</font color> <font color="#00008B"></h2></center>
+      <br> <br>
+
+      <!-- Main Input For Receiving Query to our ML -->
+    <center><form action="{{ url_for('result')}}"method="post">
+      <label for="kecamatan">Kecamatan</label>
+    <select id="kecamatan" name="kecamatan">
+      <option value="0">Ngaglik</option>
+      <option value="1">Ngemplak</option>
+    </select>
+      <br>
+      <br>
+
+    <label for="k_kamar_mandi">Kamar_Mandi</label>
+     <select id="k_kamar_mandi" name="k_kamar_mandi">
+        <option value="0">K. Mandi Dalam</option>
+        <option value="1">K. Mandi Luar</option>
+    </select>
+     <br>
+     <br>
+
+    <label for="WiFi">WiFi</label>
+     <select id="WiFi" name="WiFi">
+        <option value="0">Tidak Ada WiFi</option>
+        <option value="1">Wifi</option>
+        </select>
+        <br>
+        <br>
+
+    <label for="AC">AC</label>
+     <select id="AC" name="AC">
+        <option value="0">AC</option>
+        <option value="1">Tidak Ada AC</option>
+        </select>
+        <br>
+        <br>
+     
+     <label for="akses_24_jam">Akses_24_Jam</label>
+         <select id="akses_24_jam" name="akses_24_jam">
+            <option value="0">Akses 24 Jam</option>
+            <option value="1">Tidak Ada Akses 24 Jam</option>
+         </select>
+            <br>
+            <br>
+
+    <input type="submit" value="Prediksi">
+    </form> </center>
+
+    <br>
+    <center><h4>{{ result_text }}</h4></center>
+</div>
+<div style='text-align:center;'>
+<a href="https://www.mamikos.com/">Ayok Cari Kos dengan Mudah</a>
+</div>
+</body>
+</html>
